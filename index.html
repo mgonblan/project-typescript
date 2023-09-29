@@ -1,0 +1,30 @@
+<!-- Create a webpage that given a number returns a list with the prime numbers smaller or equal than the given one. The script must be in typescript -->
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Prime Numbers</title>
+    </head>
+    <body>
+        <h1>Prime Numbers</h1>
+        <p>Enter a number to get the prime
+            numbers smaller or equal to it.</p>
+            <form>
+                <input type="number" name="number" id="number">
+                <input type="submit" value="Submit">
+            </form>
+            <div id="result"></div>
+            <script src="prime.js"></script>
+            <script>
+                document.getElementById("result").innerHTML = prime(document.getElementById("number").value);
+                document.getElementById("number").onchange = function() {
+                    document.getElementById("result").innerHTML = prime(document.getElementById("number").value);
+                };
+                document.getElementById("submit").onclick = function() {
+                    document.getElementById("result").innerHTML = prime(document.getElementById("number").value);
+                };
+                
+            </script>
+    </body>
+</html>
